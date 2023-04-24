@@ -1,0 +1,241 @@
+﻿@page
+@model carrentalgroupassignment.Pages.admin.Dashboard
+@{
+}
+<div class="wrapper d-flex align-items-stretch">
+    <nav class="bg-dark" id="sidebar">
+        <div class="custom-menu">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <div class="p-4">
+
+            <ul class="list-unstyled components mb-5">
+                <h1><a class="logo">Admin</a> </h1>
+                <li class="active">
+                    <a href="/admin/dashboard"><span class="fa fa-home mr-3"></span> Dashboard</a>
+                </li>
+
+                <li class="bg-dark text-light">
+                    <a href="users"><span class="fa fa-briefcase mr-3"></span> users</a>
+                </li>
+                <li>
+                    <a href="profile.xhtml"><span class="fa fa-sticky-note mr-3"></span>Profile </a>
+                </li>
+                <li>
+                    <a href="/"><span class="fa fa-suitcase mr-3"></span> Log out</a>
+                </li>
+            </ul>
+            <div class="footer">
+                <p>  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  </p>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+        <h2 class="mb-4">List Of Recorded car</h2>
+        <button class="btn btn-dark p-1" data-bs-toggle="modal" data-bs-target="#addcar">Add Car</button>
+        <div class="row col-sm-12">
+            
+            @foreach (var car in @Model.getAllCars())
+            { 
+                <div class="col-sm-12 row border border-dark p-2 rounded mt-2 mb-3">
+                    <div class="col-sm-4">
+                        <p class="fw-bolder">@car.Platenumber</p>
+                        <img height="110" src="data:image/png;base64,@car.Bas64img1"/>
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="fw-bolder">Detail</p>
+                        <nav>Brand:@car.Brand</nav>
+                        <nav>Price:@car.Price</nav>
+                        <nav>Description:@car.Description</nav>
+                        <nav>SuitCase:@car.Suitcase</nav>
+
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <p class="fw-bolder">Action</p>
+                        <div class="col-sm-11 row text-canter">
+                            <div class="col-sm-4 text-center m-auto">
+                                @*Update Foem*@
+                               <div class="text-center">
+                                   
+                                    <button class="btn btn-dark p-1" data-bs-toggle="modal" data-bs-target="#updatecar">Update</button>
+                                    <div class="modal fade" id="updatecar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-success">
+                                                    <h5 class="modal-title text-light" id="modalTitleId">Update Car</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                                                </div>
+                                                <div class="modal-body">
+                                                    
+                                                    <div id="carouselId" class="carousel slide bg-dark" data-bs-ride="carousel">
+                                                        <ol class="carousel-indicators">
+                                                            <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+                                                            <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                                                        </ol>
+                                                        <div class="carousel-inner" role="listbox">
+                                                            <div class="carousel-item active">
+                                                                <img height="110" src="data:image/png;base64,@car.Bas64img1" />
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img height="110" src="data:image/png;base64,@car.Bas64img2" />
+                                                            </div>
+                                                        </div>
+                                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Previous</span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                            <span class="visually-hidden">Next</span>
+                                                        </button>
+                                                    </div>
+                                                    <form method="post" enctype="multipart/form-data">
+                                                        <input type="hidden" name="action" value="updatecar" />
+                                                        <div class="form-floating mb-3 border border-dark rounded p-1">
+                                                            <input type="text" required
+                                                               class="form-control" name="platenumber" id="formId1" placeholder="">
+                                                            <label for="formId1">Plate Number</label>
+                                                        </div>
+
+                                                        <div class="form-floating mb-3 border border-dark rounded p-1">
+                                                            <input type="tel" required
+                                                               class="form-control" name="brand" id="formId1" placeholder="">
+                                                            <label for="formId1">Brand</label>
+                                                        </div>
+
+                                                        <div class="form-floating mb-3 border border-dark rounded p-1">
+                                                            <input type="number" required value="@car.Seats"
+                                                               class="form-control" name="seats" id="formId1" placeholder="">
+                                                            <label for="formId1">Seats</label>
+                                                        </div>
+                                                        <div class="form-floating mb-3 border border-dark rounded p-1">
+                                                            <input type="number" required value="@car.Suitcase"
+                                                               class="form-control" name="suitcase" id="formId1" placeholder="">
+                                                            <label for="formId1">Suitcase</label>
+                                                        </div>
+
+                                                        <div class="form-floating mb-3 border border-dark rounded p-1">
+                                                            <textarea type="text" required 
+                                                                  class="form-control" name="description" id="formId1" placeholder="">@car.Description</textarea>
+                                                            <label for="formId1">Description</label>
+                                                        </div>
+                                                        <div class="form-floating mb-3 border border-dark rounded p-1">
+                                                            <input type="number" required value="@car.Price"
+                                                               class="form-control" name="price" id="formId1" placeholder="">
+                                                            <label for="formId1">Price</label>
+                                                        </div>
+                                                        <div class="form-floating mb-3 border border-dark rounded p-1">
+                                                            <input type="file" required value="@car.Image1"
+                                                               class="form-control" name="image1" id="formId1" placeholder="">
+                                                            <label for="formId1">Image 1</label>
+                                                        </div>
+                                                        <div class="form-floating mb-3 border border-dark rounded p-1">
+                                                            <input type="file" required value="@car.Image2"
+                                                               class="form-control" name="image2" id="formId1" placeholder="">
+                                                            <label for="formId1">Image 2</label>
+                                                        </div>
+                                                        <p>message= @Model.message</p>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                            <button type="submit" class="btn btn-primary">Save</button>
+                                                        </div>
+                                                    </form>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 m-auto">
+                                <div class="text-center">
+                                    <a type="submit" href="?platenumber=@car.Platenumber&&action=deletecar" class="bg-danger text-light rounded p-3 fs-5">Delete</a>
+                                </div>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+
+        <!-- Page Content  -->
+       
+    </div>
+
+</div>
+@*Insert car into database*@
+<div class="modal fade" id="addcar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleId">Create Car Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="action" value="createcar" />
+                    <div class="form-floating mb-3 border border-dark rounded p-1">
+                        <input type="text" required  
+                               class="form-control" name="platenumber" id="formId1" placeholder="">
+                        <label for="formId1">Plate Number</label>
+                    </div>
+
+                    <div class="form-floating mb-3 border border-dark rounded p-1">
+                        <input type="tel" required  
+                               class="form-control" name="brand" id="formId1" placeholder="">
+                        <label for="formId1">Brand</label>
+                    </div>
+
+                    <div class="form-floating mb-3 border border-dark rounded p-1">
+                        <input type="number" required value="@Model.car.Seats"
+                               class="form-control" name="seats" id="formId1" placeholder="">
+                        <label for="formId1">Seats</label>
+                    </div>
+                    <div class="form-floating mb-3 border border-dark rounded p-1">
+                        <input type="number" required value="@Model.car.Suitcase"
+                               class="form-control" name="suitcase" id="formId1" placeholder="">
+                        <label for="formId1">Suitcase</label>
+                    </div>
+
+                    <div class="form-floating mb-3 border border-dark rounded p-1">
+                        <textarea type="text" required value="@Model.car.Description"
+                                  class="form-control" name="description" id="formId1" placeholder=""></textarea>
+                        <label for="formId1">Description</label>
+                    </div>
+                    <div class="form-floating mb-3 border border-dark rounded p-1">
+                        <input type="number" required value="@Model.car.Price"
+                               class="form-control" name="price" id="formId1" placeholder="">
+                        <label for="formId1">Price</label>
+                    </div>
+                    <div class="form-floating mb-3 border border-dark rounded p-1">
+                        <input type="file" required value="@Model.car.Image1"
+                               class="form-control" name="image1" id="formId1" placeholder="">
+                        <label for="formId1">Image 1</label>
+                    </div>
+                    <div class="form-floating mb-3 border border-dark rounded p-1">
+                        <input type="file" required value="@Model.car.Image2"
+                               class="form-control" name="image2" id="formId1" placeholder="">
+                        <label for="formId1">Image 2</label>
+                    </div>
+                    <p>message= @Model.message</p>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+

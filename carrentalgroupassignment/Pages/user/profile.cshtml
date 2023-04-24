@@ -1,0 +1,133 @@
+﻿@page
+@model carrentalgroupassignment.Pages.user.profileModel
+@{
+}
+<div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar">
+        <div class="custom-menu">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <div class="p-4">
+           
+            <ul class="list-unstyled components mb-5">
+                <h1><a class="logo">@Model.usr.Name</a> </h1>
+                <li class="active">
+                    <a href="/dashboard?i=@Model.useremail"><span class="fa fa-home mr-3"></span> Dashboard</a>
+                </li>
+               
+                <li>
+                    <a href="booking.xhtml"><span class="fa fa-briefcase mr-3"></span> Booking</a>
+                </li>
+                <li class="bg-dark text-light">
+                    <a href="profile?i=@Model.useremail"><span class="fa fa-sticky-note mr-3"></span>Profile </a>
+                </li>
+                <li>
+                    <a href="/"><span class="fa fa-suitcase mr-3"></span> Log out</a>
+                </li>
+            </ul>
+            <div class="footer">
+                <p>  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  </p>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+        <h2 class="mb-4">Profile</h2>
+        <div class="row col-sm-12">
+            <div class="col-sm-6 bg-dark text-light rounded fw-bolder p-2 mb-3 text-center border border-light">
+                <nav>Booking <span class="position-relative top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span></nav>
+            </div>
+            <div class="col-sm-6 bg-dark text-light rounded fw-bolder p-2 mb-3 text-center border border-light">
+                <nav>Cart <span class="position-relative top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span></nav>
+            </div>
+
+        </div>
+        <!-- Page Content  -->
+        <div class="col-sm-6 m-auto p-2 border border-dark">
+            <div>Name:@Model.usr.Name</div>
+            <div>Gender:@Model.usr.Gender</div>
+            <div>Phone:@Model.usr.Phone</div>  
+            <div class="w-100"><button class="bg-primary p=3 text-light w-25 m-3 rounded border-0" data-bs-toggle="modal" data-bs-target="#updatemodal" class="nav-link text-light" href="#">Update</button>
+            <button class="bg-danger p=3 text-light w-25 rounded border-0" data-bs-toggle="modal" data-bs-target="#deletemodal" class="nav-link text-light" href="#">Delete</button>
+            </div>
+        </div>
+        @*update Form*@
+       <div class="modal fade" id="updatemodal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-light bg-success">
+                    <h5 class="modal-title" id="modalTitleId">Update Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                 <form  method="post">
+                     <input type="hidden" name="action" value="updateuser"/>
+                        <div class="form-floating mb-3 border border-dark rounded p-1">
+                            <input type="text" required value="@Model.usr.Name"
+                                   class="form-control" name="name" id="formId1" placeholder="">
+                            <label for="formId1">Name</label>
+                        </div>
+                        <div class="form-floating mb-3 border border-dark rounded">
+                            <select class="w-100 p-2" name="gender" value="@Model.usr.Gender" required>
+                                <option value="">--Select Gender--</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-floating mb-3 border border-dark rounded p-1">
+                            <input type="text" requiredvalue="@Model.usr.Phone"
+                                   class="form-control" name="phone" id="formId1" placeholder="">
+                            <label for="formId1">Phone Number</label>
+                        </div>
+
+                        <div class="form-floating mb-3 border border-dark rounded p-1">
+                            <input type="hidden" required value="@Model.usr.Email"
+                                   class="form-control" name="email" id="formId1" placeholder="">
+                            <label for="formId1">Email</label>
+                        </div>
+                        <div class="form-floating mb-3 border border-dark rounded p-1">
+                            <input type="password" required value="@Model.usr.Password"
+                                      class="form-control" name="password" id="formId1" placeholder="">
+                            <label for="formId1">Create Password</label>
+                        </div>
+                       <div class="modal-footer">
+                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Update</button>
+                        </div>
+                 </form>
+                 @Model.message
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+@*Delete*@
+   <div class="modal fade" id="deletemodal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm role="document">
+            <div class="modal-content">
+                <div class="modal-header text-light bg-danger">
+                    <h5 class="modal-title" id="modalTitleId">Delete Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                     <form  method="post">
+                     <input type="hidden" name="action" value="deleteuser"/>
+                        <div class="p-2 fs-5 fw-bold">
+                            @Model.usr.Name are You sure you want to delete your account
+                        </div>
+                         <div class="modal-footer">
+                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                        </div>
+                       </form>
+                    </div>
+
+         </div>
+        </div>
+   </div>

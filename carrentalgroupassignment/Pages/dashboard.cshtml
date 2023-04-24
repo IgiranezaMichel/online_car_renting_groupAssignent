@@ -1,0 +1,73 @@
+﻿@page
+@model dashboardModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar">
+        <div class="custom-menu">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <div class="p-4">
+           
+            <ul class="list-unstyled components mb-5">
+                <h1><a class="logo">@Model.usr.Name</a> </h1>
+                <li class="active bg-dark text-light">
+                    <a href="dashboard?i=@Model.useremail"><span class="fa fa-home mr-3"></span> Dashboard</a>
+                </li>
+               
+                <li>
+                    <a href="booking.xhtml"><span class="fa fa-briefcase mr-3"></span> Booking</a>
+                </li>
+                <li>
+                    <a href="/user/profile?i=@Model.useremail"><span class="fa fa-sticky-note mr-3"></span>Profile </a>
+                </li>
+                <li>
+                    <a href="/"><span class="fa fa-suitcase mr-3"></span> Log out</a>
+                </li>
+            </ul>
+            <div class="footer">
+                <p>  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  </p>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+        <h2 class="mb-4">Dashboard</h2>
+        <div class="row col-sm-12">
+            <div class="col-sm-6 bg-dark text-light rounded fw-bolder p-2 mb-3 text-center border border-light">
+                <nav>Booking <span class="position-relative top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span></nav>
+            </div>
+            <div class="col-sm-6 bg-dark text-light rounded fw-bolder p-2 mb-3 text-center border border-light">
+                <nav>Cart <span class="position-relative top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span></nav>
+            </div>
+        </div>
+        <!-- Page Content  -->
+        @foreach (var car in @Model.getAllCars())
+        {
+            <div class="col-sm-12 row border border-dark p-2 rounded mt-2 mb-3">
+                <div class="col-sm-4">
+                    <p class="fw-bolder">@car.Platenumber</p>
+                    <img height="110" src="data:image/png;base64,@car.Bas64img1"/>
+                </div>
+                <div class="col-sm-4">
+                    <p class="fw-bolder">Detail</p>
+                    <nav>Brand:@car.Brand</nav>
+                    <nav>Price:@car.Price</nav>
+                    <nav>Description:@car.Description</nav>
+                    <nav>SuitCase:@car.Suitcase</nav>
+
+                </div>
+                <div>
+                    <a>Booking</a>
+                    <a></a>
+                    </div>
+            </div>
+
+        }
+    </div>
+</div>

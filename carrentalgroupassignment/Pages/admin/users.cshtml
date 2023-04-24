@@ -1,0 +1,104 @@
+﻿@page
+@model carrentalgroupassignment.Pages.admin.usersModel
+@{
+}
+<div class="wrapper d-flex align-items-stretch">
+    <nav class="bg-dark" id="sidebar">
+        <div class="custom-menu">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <div class="p-4">
+
+            <ul class="list-unstyled components mb-5">
+                <h1><a class="logo">Admin</a> </h1>
+                <li class="active">
+                    <a href="/admin/dashboard"><span class="fa fa-home mr-3"></span> Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="users"><span class="fa fa-briefcase mr-3"></span> users</a>
+                </li>
+                <li>
+                    <a href="profile.xhtml"><span class="fa fa-sticky-note mr-3"></span>Profile </a>
+                </li>
+                <li>
+                    <a href="/"><span class="fa fa-suitcase mr-3"></span> Log out</a>
+                </li>
+            </ul>
+            <div class="footer">
+                <p>  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  </p>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+        <h2 class="mb-4">List Of Registered User</h2>
+        <div class="row col-sm-12">
+            
+            @foreach (var user in @Model.userlist())
+            {
+                <div class="col-sm-12 row border border-dark p-2 rounded row">
+                    <div class="col-sm-8">
+                        <p class="fw-bolder">Detail</p>
+                        <nav>Name:@user.Name</nav>
+                        <nav>Gender:@user.Gender</nav>
+                        <nav>Phone Number:@user.Phone</nav>
+                        <nav>Email:@user.Email</nav>
+                    </div>
+                    <div class="col-sm-4  m-auto">
+                       <a class="btn btn-danger p-2 text-light" data-bs-toggle="modal" data-bs-target="#addcar">
+                           <form method="post">
+                                <input type="hidden" value="getuser" name="action"/>
+                                <input type="hidden" name="email" value="@user.Email"/>
+                                <input class="text-light bg-danger fs-5 border-0 border-danger" type="submit" value="Delete"/>
+                           </form>
+                       </a>
+                        <div class="modal fade" id="addcar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-danger">
+                                        <h5 class="modal-title  text-light" id="modalTitleId">Delete User</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="post">
+                                            <input type="hidden" name="action" value="deleteuser"/>
+                                            <input type="hidden" name="email" value="@user.Email"/>
+                                            <p class="fw-bolder">Detail</p>
+                                            <nav>Name:@user.Name</nav>
+                                            <nav>Gender:@user.Gender</nav>
+                                            <nav>Email:@user.Email</nav>
+                                            <p>Are you sure you want to Delete This User?</p>
+                                            @Model.Message;
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+            @if (@Model.userlist().Count==0)
+            {
+                <h2 class="bg-gradient text-center">
+                    No customer that has yet Registered!
+                </h2>
+            }
+            </div>
+        
+      
+        <!-- Page Content  -->
+
+    </div>
+
+</div>
