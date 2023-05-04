@@ -8,7 +8,7 @@ namespace carrentalgroupassignment.Pages
     public class dashboardModel : PageModel
     {
         public Cardao cardao = new Cardao();
-        public string useremail;
+        public string useremail = "";
         public List<Car> getAllCars()
         {
             return cardao.getAllcar();

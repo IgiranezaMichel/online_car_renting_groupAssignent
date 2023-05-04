@@ -144,27 +144,37 @@ namespace carrentalgroupassignment.Dao
             return result;
         }
 
-        public static User findUserbyEmail(string email)     
+        public static Car findUserbyPlateNumber(string platenumber)     
         {
-            User usr = new User();
+            Car car = new Car();
             using (SqlConnection conn = new SqlConnection("Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=carrent;Integrated Security=True"))
             {
-                using (SqlCommand cmd = new SqlCommand("finduserbyemail", conn))
+                using (SqlCommand cmd = new SqlCommand("getCardetail", conn))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@platenumber", platenumber);
                     conn.Open();
                     SqlDataReader rd = cmd.ExecuteReader();
                     while (rd.Read())
                     {
-                        usr.Email = rd.GetString(0);
-                        usr.Name = rd.GetString(1);
-                        usr.Phone = rd.GetString(2);
-                        usr.Gender = rd.GetString(3);
+                        car.Platenumber = rd.GetString(0);
+                        car.Brand = rd.GetString(1);
+                        car.Seats =rd.GetInt32(2);
+                        car.Suitcase = rd.GetInt32(3);
+                        car.Description= rd.GetString(4);   
+                        car.Price=rd.GetInt32(5);
+
+                        int dataIndex = rd.GetOrdinal("image1");
+                        int dataIndex1 = rd.GetOrdinal("image2");
+                        byte[] image1 = (byte[])rd[dataIndex];
+                        car.Bas64img1 = Convert.ToBase64String(image1);
+                        int dataIndex2 = rd.GetOrdinal("image2");
+                        byte[] image2 = (byte[])rd[dataIndex1];
+                        car.Bas64img2 = Convert.ToBase64String(image2);
                     }
                 }
             }
-            return usr;
+            return car;
         }
 
     }

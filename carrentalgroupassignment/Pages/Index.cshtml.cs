@@ -10,8 +10,8 @@ namespace carrentalgroupassignment.Pages
         systemSecurity security=new systemSecurity();
        public User usr=new User();
         private UserDao dao=new UserDao();
-        public string message;
-        public string action;
+        public string message="";
+        public string action = "";
         public void OnGet()
         {
 

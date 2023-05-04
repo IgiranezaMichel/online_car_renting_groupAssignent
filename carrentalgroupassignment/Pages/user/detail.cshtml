@@ -1,0 +1,40 @@
+﻿@page
+@model carrentalgroupassignment.Pages.user.detailModel
+@{
+}
+<h2 class="border u-border-black p-2 text center">PlateNumber @Model.car.Platenumber</h2>
+<div id="carouselId" class="carousel slide bg-dark text-center" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <img height="200" src="data:image/png;base64,@Model.car.Bas64img1" />
+        </div>
+        <div class="carousel-item">
+            <img height="200" src="data:image/png;base64,@Model.car.Bas64img2" />
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="row border border-dark mt-3 p-3">
+    <div class="col-sm-4"> 
+        <nav>PlateNumber @Model.car.Platenumber</nav>
+        <nav>Price @Model.car.Price $ per day</nav>
+    </div>
+    <div class="col-sm-4">
+        <nav>Brand: @Model.car.Brand</nav>
+        <nav>Seats: @Model.car.Seats</nav>
+    </div>
+    <div class="col-sm-4">
+        <nav>Description: @Model.car.Description</nav>
+    </div>
+</div>

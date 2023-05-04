@@ -13,7 +13,7 @@ namespace carrentalgroupassignment.Pages.admin
         public Cardao cardao = new Cardao();
         public string message = "";
         public string action="";
-        private string getaction;
+        private string getaction="";
          public string Getaction { get { return getaction; } set { getaction = value; } }
         public Car GetCar()
         {

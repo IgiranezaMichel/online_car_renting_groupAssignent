@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Content Remove="Pages\Shared\profile.cshtml" />
-    <Content Remove="Pages\user\booking.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,15 +20,6 @@
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="Pages\Shared\profile.cshtml" />
-    <_ContentIncludedByDefault Remove="Pages\user\booking.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\user\booking.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Pages\user\booking.cshtml" />
   </ItemGroup>
 
 </Project>

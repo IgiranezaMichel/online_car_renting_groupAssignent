@@ -1,0 +1,21 @@
+﻿@page
+@model carrentalgroupassignment.Pages.user.bookingsModel
+@{
+}
+<form method="post" class="col-sm-6 m-auto mt-5">
+    <img/>
+    <input type="hidden" name="action" value="addbooking" />
+
+    <div class="form-floating mb-3 border border-dark rounded">
+       <input class="form-control" type="datetime-local" value="@Model.booking.FromDate" name="fromdate"/>
+        <label for="formId1">From Date</label>
+    </div>
+    <div class="form-floating mb-3 border border-dark rounded">
+        <input class="form-control" type="datetime-local" value="@Model.booking.ToDate" name="todate" />
+        <label for="formId1">to Date</label>
+    </div>
+  
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-success">Book</button>
+    </div>
+</form>

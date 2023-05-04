@@ -8,9 +8,9 @@ namespace carrentalgroupassignment.Pages.user
     public class profileModel : PageModel
     {
         public Cardao cardao = new Cardao();
-        public string action;
-        public string message;
-        public string useremail;
+        public string action = "";
+        public string message = "";
+        public string useremail = "";
         public List<Car> getAllCars()
         {
             return cardao.getAllcar();
