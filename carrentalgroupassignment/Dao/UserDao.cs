@@ -9,7 +9,7 @@ namespace carrentalgroupassignment.Dao
         { 
             try
             {
-                using(SqlConnection conn=new SqlConnection("Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=carrent;Integrated Security=True"))
+                using(SqlConnection conn=new SqlConnection("Data Source=KABALISA-PC\\KABALISA;Initial Catalog=carrents;Integrated Security=True"))
                 {
                     using(SqlCommand cmd=new SqlCommand("createuser", conn))
                     { 
@@ -35,7 +35,7 @@ namespace carrentalgroupassignment.Dao
             string isSaved = "User Deleted Successfully";
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=carrent;Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection("Data Source=KABALISA-PC\\KABALISA;Initial Catalog=carrents;Integrated Security=True"))
                 {
                     using (SqlCommand cmd = new SqlCommand("deleteUser", conn))
                     {
@@ -58,7 +58,7 @@ namespace carrentalgroupassignment.Dao
             string isSaved = "Credential Updated Successfully";
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=carrent;Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection("Data Source=KABALISA-PC\\KABALISA;Initial Catalog=carrents;Integrated Security=True"))
                 {
                     using (SqlCommand cmd = new SqlCommand("updateuser", conn))
                     {
@@ -83,7 +83,7 @@ namespace carrentalgroupassignment.Dao
         {
             List<User> users = new List<User>();
             User user = new User();
-            using (SqlConnection conn = new SqlConnection("Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=carrent;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection("Data Source=KABALISA-PC\\KABALISA;Initial Catalog=carrents;Integrated Security=True"))
                 {
                     using (SqlCommand cmd = new SqlCommand("displayallcustomer", conn))
                     {
@@ -107,7 +107,7 @@ namespace carrentalgroupassignment.Dao
         public static String UserLogin(User user)
         {
             string result="";
-                using (SqlConnection conn = new SqlConnection("Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=carrent;Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection("Data Source=KABALISA-PC\\KABALISA;Initial Catalog=carrents;Integrated Security=True"))
                 {
                     using (SqlCommand cmd = new SqlCommand("customerlogin", conn))
                     {
@@ -129,7 +129,7 @@ namespace carrentalgroupassignment.Dao
         public static User findUserbyEmail(string email)     
         {
             User usr = new User();
-            using (SqlConnection conn = new SqlConnection("Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=carrent;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection("Data Source=KABALISA-PC\\KABALISA;Initial Catalog=carrents;Integrated Security=True"))
             {
                 using (SqlCommand cmd = new SqlCommand("finduserbyemail", conn))
                 {
