@@ -9,65 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = carrentalgroupassignment
 build_property.RootNamespace = carrentalgroupassignment
-build_property.ProjectDir = C:\Users\Eng Michael\Desktop\Assignment\carrentalgroupassignment\carrentalgroupassignment\
+build_property.ProjectDir = C:\Users\Godwin\Desktop\AUCA NOTES UPDATE\DotNet\Car Renting New\online_car_renting_groupAssignent\carrentalgroupassignment\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Eng Michael\Desktop\Assignment\carrentalgroupassignment\carrentalgroupassignment
+build_property.MSBuildProjectDirectory = C:\Users\Godwin\Desktop\AUCA NOTES UPDATE\DotNet\Car Renting New\online_car_renting_groupAssignent\carrentalgroupassignment
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Eng Michael/Desktop/Assignment/carrentalgroupassignment/carrentalgroupassignment/Pages/admin/dashboard.cshtml]
+[C:/Users/Godwin/Desktop/AUCA NOTES UPDATE/DotNet/Car Renting New/online_car_renting_groupAssignent/carrentalgroupassignment/Pages/admin/dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cZGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eng Michael/Desktop/Assignment/carrentalgroupassignment/carrentalgroupassignment/Pages/admin/users.cshtml]
+[C:/Users/Godwin/Desktop/AUCA NOTES UPDATE/DotNet/Car Renting New/online_car_renting_groupAssignent/carrentalgroupassignment/Pages/admin/users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cdXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eng Michael/Desktop/Assignment/carrentalgroupassignment/carrentalgroupassignment/Pages/dashboard.cshtml]
+[C:/Users/Godwin/Desktop/AUCA NOTES UPDATE/DotNet/Car Renting New/online_car_renting_groupAssignent/carrentalgroupassignment/Pages/dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcZGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eng Michael/Desktop/Assignment/carrentalgroupassignment/carrentalgroupassignment/Pages/Error.cshtml]
+[C:/Users/Godwin/Desktop/AUCA NOTES UPDATE/DotNet/Car Renting New/online_car_renting_groupAssignent/carrentalgroupassignment/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eng Michael/Desktop/Assignment/carrentalgroupassignment/carrentalgroupassignment/Pages/Index.cshtml]
+[C:/Users/Godwin/Desktop/AUCA NOTES UPDATE/DotNet/Car Renting New/online_car_renting_groupAssignent/carrentalgroupassignment/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eng Michael/Desktop/Assignment/carrentalgroupassignment/carrentalgroupassignment/Pages/Privacy.cshtml]
+[C:/Users/Godwin/Desktop/AUCA NOTES UPDATE/DotNet/Car Renting New/online_car_renting_groupAssignent/carrentalgroupassignment/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eng Michael/Desktop/Assignment/carrentalgroupassignment/carrentalgroupassignment/Pages/Shared/payment.cshtml]
+[C:/Users/Godwin/Desktop/AUCA NOTES UPDATE/DotNet/Car Renting New/online_car_renting_groupAssignent/carrentalgroupassignment/Pages/Shared/payment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXHBheW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eng Michael/Desktop/Assignment/carrentalgroupassignment/carrentalgroupassignment/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Godwin/Desktop/AUCA NOTES UPDATE/DotNet/Car Renting New/online_car_renting_groupAssignent/carrentalgroupassignment/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eng Michael/Desktop/Assignment/carrentalgroupassignment/carrentalgroupassignment/Pages/user/bookings.cshtml]
+[C:/Users/Godwin/Desktop/AUCA NOTES UPDATE/DotNet/Car Renting New/online_car_renting_groupAssignent/carrentalgroupassignment/Pages/user/bookings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxib29raW5ncy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eng Michael/Desktop/Assignment/carrentalgroupassignment/carrentalgroupassignment/Pages/user/detail.cshtml]
+[C:/Users/Godwin/Desktop/AUCA NOTES UPDATE/DotNet/Car Renting New/online_car_renting_groupAssignent/carrentalgroupassignment/Pages/user/detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxkZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eng Michael/Desktop/Assignment/carrentalgroupassignment/carrentalgroupassignment/Pages/user/profile.cshtml]
+[C:/Users/Godwin/Desktop/AUCA NOTES UPDATE/DotNet/Car Renting New/online_car_renting_groupAssignent/carrentalgroupassignment/Pages/user/profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxwcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eng Michael/Desktop/Assignment/carrentalgroupassignment/carrentalgroupassignment/Pages/_ViewImports.cshtml]
+[C:/Users/Godwin/Desktop/AUCA NOTES UPDATE/DotNet/Car Renting New/online_car_renting_groupAssignent/carrentalgroupassignment/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eng Michael/Desktop/Assignment/carrentalgroupassignment/carrentalgroupassignment/Pages/_ViewStart.cshtml]
+[C:/Users/Godwin/Desktop/AUCA NOTES UPDATE/DotNet/Car Renting New/online_car_renting_groupAssignent/carrentalgroupassignment/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Eng Michael/Desktop/Assignment/carrentalgroupassignment/carrentalgroupassignment/Pages/Shared/_Layout.cshtml]
+[C:/Users/Godwin/Desktop/AUCA NOTES UPDATE/DotNet/Car Renting New/online_car_renting_groupAssignent/carrentalgroupassignment/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-fhm2psnett

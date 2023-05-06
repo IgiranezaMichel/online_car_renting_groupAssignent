@@ -470,24 +470,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Eng Michael\\.nuget\\packages\\": {},
-    "E:\\.net\\NuGetPackages": {}
+    "C:\\Users\\Godwin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eng Michael\\Desktop\\Assignment\\carrentalgroupassignment\\carrentalgroupassignment\\carrentalgroupassignment.csproj",
+      "projectUniqueName": "C:\\Users\\Godwin\\Desktop\\AUCA NOTES UPDATE\\DotNet\\Car Renting New\\online_car_renting_groupAssignent\\carrentalgroupassignment\\carrentalgroupassignment.csproj",
       "projectName": "carrentalgroupassignment",
-      "projectPath": "C:\\Users\\Eng Michael\\Desktop\\Assignment\\carrentalgroupassignment\\carrentalgroupassignment\\carrentalgroupassignment.csproj",
-      "packagesPath": "C:\\Users\\Eng Michael\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eng Michael\\Desktop\\Assignment\\carrentalgroupassignment\\carrentalgroupassignment\\obj\\",
+      "projectPath": "C:\\Users\\Godwin\\Desktop\\AUCA NOTES UPDATE\\DotNet\\Car Renting New\\online_car_renting_groupAssignent\\carrentalgroupassignment\\carrentalgroupassignment.csproj",
+      "packagesPath": "C:\\Users\\Godwin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Godwin\\Desktop\\AUCA NOTES UPDATE\\DotNet\\Car Renting New\\online_car_renting_groupAssignent\\carrentalgroupassignment\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "E:\\.net\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Eng Michael\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Godwin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -495,7 +490,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -538,7 +532,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

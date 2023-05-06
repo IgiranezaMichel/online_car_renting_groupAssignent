@@ -10,7 +10,7 @@ namespace carrentalgroupassignment.Dao
         { 
             try
             {
-                using(SqlConnection conn=new SqlConnection("Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=carrent;Integrated Security=True"))
+                using(SqlConnection conn=new SqlConnection("Data Source=KABALISA-PC\\KABALISA;Initial Catalog=carrents;Integrated Security=True"))
                 {
                     using(SqlCommand cmd=new SqlCommand("createcar", conn))
                     { 
@@ -39,7 +39,7 @@ namespace carrentalgroupassignment.Dao
             string  Deleted = "Car Deleted Successfully";
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=carrent;Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection("Data Source=KABALISA-PC\\KABALISA;Initial Catalog=carrents;Integrated Security=True"))
                 {
                     using (SqlCommand cmd = new SqlCommand("deleteacar", conn))
                     {
@@ -62,7 +62,7 @@ namespace carrentalgroupassignment.Dao
             string update = "Car is Update Successfully";
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=carrent;Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection("Data Source=KABALISA-PC\\KABALISA;Initial Catalog=carrents;Integrated Security=True"))
                 {
                     using (SqlCommand cmd = new SqlCommand("updatecar", conn))
                     {
@@ -91,7 +91,7 @@ namespace carrentalgroupassignment.Dao
         {
             List<Car> carlist = new List<Car>();
             
-            using (SqlConnection conn = new SqlConnection("Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=carrent;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection("Data Source=KABALISA-PC\\KABALISA;Initial Catalog=carrents;Integrated Security=True"))
                 {
                     using (SqlCommand cmd = new SqlCommand("displaycars", conn))
                     {
@@ -125,7 +125,7 @@ namespace carrentalgroupassignment.Dao
         public static String UserLogin(User user)
         {
             string result="";
-                using (SqlConnection conn = new SqlConnection("Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=carrent;Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection("Data Source=KABALISA-PC\\KABALISA;Initial Catalog=carrents;Integrated Security=True"))
                 {
                     using (SqlCommand cmd = new SqlCommand("customerlogin", conn))
                     {
@@ -147,7 +147,7 @@ namespace carrentalgroupassignment.Dao
         public static Car findUserbyPlateNumber(string platenumber)     
         {
             Car car = new Car();
-            using (SqlConnection conn = new SqlConnection("Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=carrent;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection("Data Source=KABALISA-PC\\KABALISA;Initial Catalog=carrents;Integrated Security=True"))
             {
                 using (SqlCommand cmd = new SqlCommand("getCardetail", conn))
                 {
