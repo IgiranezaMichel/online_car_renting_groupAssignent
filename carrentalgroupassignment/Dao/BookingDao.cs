@@ -10,7 +10,7 @@ namespace carrentalgroupassignment.Dao
             string result = "booking Added Successfully";
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=carrent;Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection("Data Source=KABALISA-PC\\KABALISA;Initial Catalog=carrents;Integrated Security=True"))
                 {
                     using (SqlCommand cmd = new SqlCommand("createbooking", conn))
                     {
@@ -36,7 +36,7 @@ namespace carrentalgroupassignment.Dao
             string result = "booking Added Successfully";
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=carrent;Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection("Data Source=KABALISA-PC\\KABALISA;Initial Catalog=carrents;Integrated Security=True"))
                 {
                     using (SqlCommand cmd = new SqlCommand("createbooking", conn))
                     {
