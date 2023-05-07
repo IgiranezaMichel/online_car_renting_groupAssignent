@@ -11,13 +11,13 @@
             </button>
         </div>
         <div class="p-4">
-           
+
             <ul class="list-unstyled components mb-5">
                 <h1><a class="logo">@Model.usr.Name</a> </h1>
                 <li class="active bg-dark text-light">
                     <a href="dashboard?i=@Model.useremail"><span class="fa fa-home mr-3"></span> Dashboard</a>
                 </li>
-               
+
                 <li>
                     <a href="/user/bookings?i=@Model.useremail"><span class="fa fa-briefcase mr-3"></span> Booking</a>
                 </li>
@@ -50,9 +50,9 @@
         @foreach (var car in @Model.getAllCars())
         {
             <div class="col-sm-12 row border border-dark p-2 rounded mt-2 mb-3">
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <p class="fw-bolder">@car.Platenumber</p>
-                    <img height="110" src="data:image/png;base64,@car.Bas64img1"/>
+                    <img height="110" src="data:image/png;base64,@car.Bas64img1" />
                 </div>
                 <div class="col-sm-4">
                     <p class="fw-bolder">Detail</p>
@@ -62,10 +62,10 @@
                     <nav>SuitCase:@car.Suitcase</nav>
 
                 </div>
-               <div class="col-sm-2">
-                    <a class="bg-dark text-light fs-4 rounded m-3" href="/user/bookings?i=@Model.useremail&c=@car.Platenumber"><button>Book Now</button></a>
-                    <a class="bg-dark text-light fs-4 rounded m-3" href="/user/detail?c=@car.Platenumber"><button>View Detail</button></a>
-                   </div>
+                <div class="col-sm-4 p-3">
+                    <a class="bg-dark text-light fs-4  m-3" href="/user/bookings?i=@Model.useremail&c=@car.Platenumber"><button class="bg-dark text-light rounded">Book</button></a>
+                    <a class=" text-light fs-4  m-3" href="/user/detail?c=@car.Platenumber"><button class="bg-dark text-light rounded"> Detail</button></a>
+                </div>
             </div>
 
         }
